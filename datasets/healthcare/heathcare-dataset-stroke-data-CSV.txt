@@ -1,0 +1,24 @@
+df = df.drop(columns=['smoking_status'])
+df = df.drop(columns=['id'])
+df = df.drop(columns=['bmi'])
+#df = df.drop_duplicates(keep = False, inplace = True)
+
+# gender: 0 for female and 1 for male, 3 for Other
+df["gender"]=df["gender"].replace("Female",1)  
+df["gender"]=df["gender"].replace("Male",2)
+df["gender"]=df["gender"].replace("Other",3)
+
+# Residence_type: 0 for females and 1 for males
+df["Residence_type"]=df["Residence_type"].replace("Urban",0)  
+df["Residence_type"]=df["Residence_type"].replace("Rural",1)
+
+# ever_married: 0 for No, 1 for Yes
+df["ever_married"]=df["ever_married"].replace("No",0)  
+df["ever_married"]=df["ever_married"].replace("Yes",1)
+
+# work_type: 1 for Private, 2 for Self-employed, 3 for children, 4 for Govt_job, 5 for Never_worked
+df["work_type"]=df["work_type"].replace("Private",1)
+df["work_type"]=df["work_type"].replace("Self-employed",2)
+df["work_type"]=df["work_type"].replace("children",3)
+df["work_type"]=df["work_type"].replace("Govt_job",4)
+df["work_type"]=df["work_type"].replace("Never_worked",5)

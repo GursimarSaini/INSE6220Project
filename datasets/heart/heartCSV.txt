@@ -1,0 +1,23 @@
+# Sex: 0 for females and 1 for males
+df["Sex"]=df["Sex"].replace("F",0)  
+df["Sex"]=df["Sex"].replace("M",1)
+
+# ChestPainType: 1 for ASY, 2 for NAP, 3 for ATA, 4 for TA
+df["ChestPainType"]=df["ChestPainType"].replace("ASY",1)  
+df["ChestPainType"]=df["ChestPainType"].replace("NAP",2) 
+df["ChestPainType"]=df["ChestPainType"].replace("ATA",3) 
+df["ChestPainType"]=df["ChestPainType"].replace("TA",4) 
+
+# RestingECG: 1 for Normal, 2 for LVH, and 3 for ST
+df["RestingECG"]=df["RestingECG"].replace("Normal",1) 
+df["RestingECG"]=df["RestingECG"].replace("LVH",2) 
+df["RestingECG"]=df["RestingECG"].replace("ST",3) 
+
+# ExerciseAngina: 0 for N and 1 for Y
+df["ExerciseAngina"]=df["ExerciseAngina"].replace("N",0)
+df["ExerciseAngina"]=df["ExerciseAngina"].replace("Y",1)
+
+# ST_Slope: 1 for Flat, 2 for Up, and 3 for Down
+df["ST_Slope"]=df["ST_Slope"].replace("Flat",1)
+df["ST_Slope"]=df["ST_Slope"].replace("Up",2)
+df["ST_Slope"]=df["ST_Slope"].replace("Down",3)
