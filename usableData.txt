@@ -1,5 +1,4 @@
-Appendicitis (binary classification)
-Stress (hella lot sussy)
+Appendicitis (binary classification, 83.8%)
+Stress (hella lot sussy/most probably generated dataset)
 Abalone (too common)
 Occupancy (binary classification, 93% explained variance, datatest2.csv)
-energyEfficiency (Multi, 83%, but some probably with class)

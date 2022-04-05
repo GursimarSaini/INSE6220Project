@@ -1,0 +1,51 @@
+
+Website Phishing Data Set
+
+Link: https://web.archive.org/web/20170710144520/http://archive.ics.uci.edu/ml/datasets/Website+Phishing
+
+Source:
+
+
+Neda Abdelhamid
+Auckland Institute of Studies
+nedah '@' ais.ac.nz
+
+
+Data Set Information:
+
+The phishing problem is considered a vital issue in â€œ.COMâ€ industry especially e-banking and e-commerce taking the number of online transactions involving payments.
+We have identified different features related to legitimate and phishy websites and collected 1353 different websites from difference sources.Phishing websites were collected from Phishtank data archive (www.phishtank.com), which is a free community site where users can submit, verify, track and share phishing data. The legitimate websites were collected from Yahoo and starting point directories using a web script developed in PHP. The PHP script was plugged with a browser and we collected 548 legitimate websites out of 1353 websites. There is 702 phishing URLs, and 103 suspicious URLs.
+
+When a website is considered SUSPICIOUS that means it can be either phishy or legitimate, meaning the website held some legit and phishy features.
+
+
+Attribute Information:
+
+URL Anchor
+Request URL
+SFH
+URL Length
+Having â€™@â€™
+Prefix/Suffix
+IP
+Sub Domain
+Web traffic
+Domain age
+Class
+
+
+
+collected features hold the categorical values , â€œLegitimateâ€, â€Suspiciousâ€ and â€œPhishyâ€, these values have been replaced with numerical values 1,0 and -1 respectively.
+details of each feature are mentioned in the research paper mentioned below
+
+
+Relevant Papers:
+
+You can view all citations that used the paper that has applied this data, mentioned below
+at [Web Link]
+
+
+
+Citation Request:
+
+Abdelhamid et al.,(2014a) Phishing Detection based Associative Classification Data Mining. Expert Systems With Applications (ESWA), 41 (2014) 5948â€“5959.
