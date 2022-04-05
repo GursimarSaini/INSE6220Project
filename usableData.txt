@@ -1,3 +1,5 @@
-Appendicitis
+Appendicitis (binary classification)
 Stress (hella lot sussy)
 Abalone (too common)
+Occupancy (binary classification, 93% explained variance, datatest2.csv)
+energyEfficiency (Multi, 83%, but some probably with class)
