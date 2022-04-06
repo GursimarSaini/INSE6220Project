@@ -1,4 +1,0 @@
-Appendicitis (binary classification, 83.8%)
-Stress (hella lot sussy/most probably generated dataset)
-Abalone (too common)
-Occupancy (binary classification, 93% explained variance, datatest2.csv)
