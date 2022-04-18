@@ -88,9 +88,9 @@ For our study, standardisation is preferred over centering to avoid precision er
 
 S = (1/n-1) × Y<sup>T</sup> × Y .......... (2)
 
-![Table 5: Covariance Matrix](figures/tables/stanData.png "Table 5: Covariance Matrix")
+![Table 5: Covariance Matrix](figures/tables/cova.png "Table 5: Covariance Matrix")
 
-The study notebook doesn't include this step for PCA implementation, as PCA library directly outputs the PC scores.
+The study notebook doesn't include this as a step for PCA implementation, as PCA library directly outputs the PC scores.
 
 3. Eigen Decomposition: Eigenvectors and eigenvalues are obtained from the Covariance matrix S with eigen dencomposition. Eigenvectors give direction of Principal Components with variance of PCs dented with eigenvalues and are given by [3]:
 
@@ -110,7 +110,7 @@ Z = Y×A .......... (4)
 
 The variance of jth PC is given as following [3]:
 
-![Figure 7: Explained Variance](figures/explainedVariance.png "Figure 7: Explained Variance")
+![Figure 7: Explained Variance](figures/explainedVariance.png "Figure 7: Explained Variance") .......... (5)
 
 where λ<sub>j</sub> gives the variance of jth PC. Both Scree/Elbow plots can be used to get an idea of how many PCs are needed to represent the variance present in the data. In this study, we found out that variance accounted for first PC is l<sub>1</sub> = 54.7% and by 2nd PC it is l<sub>2</sub> = 33.9% and that by 3rd PC is l<sub>3</sub> = 6.97%. The elbow joint in the scree plot, shows a bend at PC number 3, that is also supported with Pareto Chart. So, it's safe to assume that dimensions of eigenvector or Z components can be reduced to 3.
 
@@ -120,7 +120,7 @@ where λ<sub>j</sub> gives the variance of jth PC. Both Scree/Elbow plots can be
 
 The **Table 6** table gives a subset of the PCs, 8143×5 as 8143×3 because first 3 PCs explain 99.98% of the whole variance of dataset. The first PC component Z<sub>1</sub> is given by [3]:
 
-![Table 6: PCs](figures/tables/pcs.png "Table 6: PCs")  .......... (5)
+![Table 6: PCs](figures/tables/pcs.png "Table 6: PCs")  
 
 Z<sub>1</sub> = 0.55007×X<sub>4</sub> + 0.501116×X<sub>5</sub> + 0.414149×X<sub>3</sub> + 0.395664×X<sub>2</sub> + 0.343856×X<sub>1</sub>
 
@@ -143,12 +143,6 @@ BiPlot gives the same information as of **Figure 10**. The angles between the ve
 This same could be represented for three PCs with help of 3d BiPlot as shown in **Figure 12**.
 
 ![Figure 12: BiPlot3d](figures/biplot3d.png "Figure 12: BiPlot3d")
-
-The final step in PCA is to inspect the control chart to ensure that all of the points are between the Upper Control Limit (UCL) and Lower Control Limit (LCL) (LCL). Equation 6 gives a comprehensive guide for these limits [3]:
-
-![Figure 13: controlEquations](figures/controlEquations.png "Figure 13: controlEquations")
-
-where λ<sub>j</sub> is the eigenvalue for the j<sup>j</sup> PC.
 
 ---------------------------------------------------------
 ## Ⅳ. Classification Algorithms:
