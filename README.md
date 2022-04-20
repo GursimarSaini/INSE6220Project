@@ -167,7 +167,7 @@ The procedure for determining the class of a given dataset in a decision tree st
 4. Create the node of the decision tree that has the best attribute.
 5. Create new decision trees in a recursive manner using the subsets of the dataset created in step 3. Continue this procedure until the nodes can no longer be classified, at which point the final node is referred to as a leaf node.
 
-![Figure 15: Random Forest](figures/rf.png "Figure 15: Random Forest")
+![Figure 15: dtAUC](figures/dtAUC.png "Figure 15: dtAUC")
 
 2. Random Forest Classifier:
 
@@ -179,7 +179,7 @@ Deep-grown trees, in particular, tend to acquire very irregular patterns: they o
 
 The hyperparameters of random forest are nearly equivalent to those of decision trees and bagging classifiers. Random Forest adds more randomness to the model as it grows the trees. When dividing a node, the best feature from a random collection of qualities is chosen rather than the most important trait. As a result, there is a large range of variability, resulting in a better model overall. As a result, the random forest strategy for dividing a node examines just a random subset of the features. You may even make trees more random by using random thresholds for each feature rather than searching for the best possible thresholds [14].
 
-![Figure 17: Random Forest](figures/rf.png "Figure 17: Random Forest")
+![Figure 17: rfAUC](figures/rfAUC.png "Figure 17: rfAUC")
 
 3. Extra Trees Classifier:
 
@@ -191,7 +191,7 @@ The Extra Trees Classifier is less computationally costly than a Random Forest s
 
 During the construction of the forest, the normalised total reduction in the mathematical criteria used in the decision of feature of split (Gini Index if the Gini Index is used in the construction of the forest) is computed for each feature to perform feature selection using the above forest structure. This value is called the Gini Importance of the feature. To execute feature selection, each feature is ranked in descending order by Gini Importance, and the user selects the top k features based on his or her preferences [18].
 
-![Figure 18: Random Forest](figures/rf.png "Figure 18: Random Forest")
+![Figure 18: etAUC](figures/etAUC.png "Figure 18: etAUC")
 
 4. Light Gradient Boosting Machine Classifier:
 
@@ -210,7 +210,7 @@ The **Figure 20** and **Figure 21** discusses this difference.
 ![Figure 20: xgboost](figures/xgboost.png "Figure 20: xgboost")
 ![Figure 21: lightgbm](figures/lightgbm.png "Figure 21: lightgbm")
 
-![Figure 22: Random Forest](figures/rf.png "Figure 22: Random Forest")
+![Figure 22: lightGBMauc](figures/lightGBMauc.png "Figure 22: lightGBMauc")
 
 ---------------------------------------------------------
 ## Ⅴ. Classification vs Classification+PCA Results:
