@@ -167,15 +167,19 @@ The procedure for determining the class of a given dataset in a decision tree st
 4. Create the node of the decision tree that has the best attribute.
 5. Create new decision trees in a recursive manner using the subsets of the dataset created in step 3. Continue this procedure until the nodes can no longer be classified, at which point the final node is referred to as a leaf node.
 
+![Figure 15: Random Forest](figures/rf.png "Figure 15: Random Forest")
+
 2. Random Forest Classifier:
 
 Random forests, also known as random choice forests, are an ensemble learning approach for classification, regression, and other problems that works by generating a large number of decision trees during training. The decision forest is often trained using the "bagging" approach. The bagging approach is based on the premise that combining learning models improves the final output [14]. For classification problems, the random forest output is the class chosen by the majority of trees. [15] [16].
 
-![Figure 16: Random Forest](figures/rf.png "Figure 14: Random Forest")
+![Figure 16: Random Forest](figures/rf.png "Figure 16: Random Forest")
 
 Deep-grown trees, in particular, tend to acquire very irregular patterns: they overfit their training sets, resulting in low bias but very high variance. Random forests are a method of averaging numerous deep decision trees that have been trained on various regions of the same training set in order to reduce variance [17]. This results in a minor increase in bias and some loss of interpretability, but it considerably enhances the final model's performance.
 
 The hyperparameters of random forest are nearly equivalent to those of decision trees and bagging classifiers. Random Forest adds more randomness to the model as it grows the trees. When dividing a node, the best feature from a random collection of qualities is chosen rather than the most important trait. As a result, there is a large range of variability, resulting in a better model overall. As a result, the random forest strategy for dividing a node examines just a random subset of the features. You may even make trees more random by using random thresholds for each feature rather than searching for the best possible thresholds [14].
+
+![Figure 17: Random Forest](figures/rf.png "Figure 17: Random Forest")
 
 3. Extra Trees Classifier:
 
@@ -187,9 +191,11 @@ The Extra Trees Classifier is less computationally costly than a Random Forest s
 
 During the construction of the forest, the normalised total reduction in the mathematical criteria used in the decision of feature of split (Gini Index if the Gini Index is used in the construction of the forest) is computed for each feature to perform feature selection using the above forest structure. This value is called the Gini Importance of the feature. To execute feature selection, each feature is ranked in descending order by Gini Importance, and the user selects the top k features based on his or her preferences [18].
 
+![Figure 18: Random Forest](figures/rf.png "Figure 18: Random Forest")
+
 4. Light Gradient Boosting Machine Classifier:
 
-Gradient boosting is a type of machine learning method that may be used to solve classification or regression predictive modelling challenges. Decision tree models are used to create ensembles. To repair the prediction mistakes caused by past models, trees are introduced to the ensemble one at a time and fitted. The boosting model is a sort of ensemble machine learning model. Models are fitted using a gradient descent optimization approach and any arbitrary differentiable loss function. Gradient boosting gets its name from the fact that the loss gradient is reduced when the model is fitted, much like a neural network. [20].
+Gradient boosting is a type of machine learning method that may be used to solve classification or regression predictive modelling challenges. Decision tree models are used to create ensembles. To repair the prediction mistakes caused by past models, trees are introduced to the ensemble one at a time and fitted. The boosting model is a sort of ensemble machine learning model. Models are fitted using a gradient descent optimization approach and any arbitrary differentiable loss function. Gradient boosting gets its name from the fact that the loss gradient is reduced when the model is fitted, much like a neural network [20].
 
 LightGBM improves on the gradient boosting technique by using a sort of autonomous feature selection and focuses on boosting cases with greater gradients. This can result in a significant increase in training speed and enhanced prediction performance. The implementation presents two major concepts: EFB and GOSS [20].
 
@@ -201,8 +207,10 @@ It splits the tree leaf-wise with the greatest fit since it is based on decision
 
 The **Figure 20** and **Figure 21** discusses this difference.
 
-![Figure 20: xgboost](figures/xgboost.png "Figure 17: xgboost")
-![Figure 21: lightgbm](figures/lightgbm.png "Figure 18: lightgbm")
+![Figure 20: xgboost](figures/xgboost.png "Figure 20: xgboost")
+![Figure 21: lightgbm](figures/lightgbm.png "Figure 21: lightgbm")
+
+![Figure 22: Random Forest](figures/rf.png "Figure 22: Random Forest")
 
 ---------------------------------------------------------
 ## Ⅴ. Classification vs Classification+PCA Results:

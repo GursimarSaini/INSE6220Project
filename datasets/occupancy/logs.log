@@ -20646,3 +20646,227 @@ OSError: [Errno 22] Invalid argument
 2022-04-19 20:09:36,766:INFO:Plot type: parameter
 2022-04-19 20:09:37,054:INFO:Visual Rendered Successfully
 2022-04-19 20:09:45,070:INFO:plot_model() succesfully completed......................................
+2022-04-20 07:23:33,763:INFO:Initializing create_model()
+2022-04-20 07:23:33,783:INFO:create_model(estimator=et, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=True, verbose=True, system=True, metrics=None, experiment_custom_tags=None, add_to_model_list=True, probability_threshold=None, display=None, return_train_score=False, kwargs={})
+2022-04-20 07:23:33,784:INFO:Checking exceptions
+2022-04-20 07:23:33,817:INFO:Preparing display monitor
+2022-04-20 07:23:34,158:INFO:Importing libraries
+2022-04-20 07:23:34,161:INFO:Copying training dataset
+2022-04-20 07:23:34,182:INFO:Defining folds
+2022-04-20 07:23:34,185:INFO:Declaring metric variables
+2022-04-20 07:23:34,232:INFO:Importing untrained model
+2022-04-20 07:23:34,280:INFO:Extra Trees Classifier Imported succesfully
+2022-04-20 07:23:34,355:INFO:Starting cross validation
+2022-04-20 07:23:34,372:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2022-04-20 07:24:07,767:INFO:Calculating mean and std
+2022-04-20 07:24:07,773:INFO:Creating metrics dataframe
+2022-04-20 07:24:07,876:INFO:Finalizing model
+2022-04-20 07:24:09,209:INFO:Uploading results into container
+2022-04-20 07:24:09,209:INFO:Uploading model into container now
+2022-04-20 07:24:09,290:INFO:create_model_container: 25
+2022-04-20 07:24:09,291:INFO:master_model_container: 25
+2022-04-20 07:24:09,291:INFO:display_container: 13
+2022-04-20 07:24:09,304:INFO:ExtraTreesClassifier(bootstrap=False, ccp_alpha=0.0, class_weight=None,
+                     criterion='gini', max_depth=None, max_features='auto',
+                     max_leaf_nodes=None, max_samples=None,
+                     min_impurity_decrease=0.0, min_impurity_split=None,
+                     min_samples_leaf=1, min_samples_split=2,
+                     min_weight_fraction_leaf=0.0, n_estimators=100, n_jobs=-1,
+                     oob_score=False, random_state=666, verbose=0,
+                     warm_start=False)
+2022-04-20 07:24:09,305:INFO:create_model() succesfully completed......................................
+2022-04-20 07:24:24,991:INFO:Initializing tune_model()
+2022-04-20 07:24:24,992:INFO:tune_model(estimator=ExtraTreesClassifier(bootstrap=False, ccp_alpha=0.0, class_weight=None,
+                     criterion='gini', max_depth=None, max_features='auto',
+                     max_leaf_nodes=None, max_samples=None,
+                     min_impurity_decrease=0.0, min_impurity_split=None,
+                     min_samples_leaf=1, min_samples_split=2,
+                     min_weight_fraction_leaf=0.0, n_estimators=100, n_jobs=-1,
+                     oob_score=False, random_state=666, verbose=0,
+                     warm_start=False), fold=None, round=4, n_iter=10, custom_grid=None, optimize=Accuracy, custom_scorer=None, search_library=scikit-learn, search_algorithm=None, early_stopping=False, early_stopping_max_iters=10, choose_better=False, fit_kwargs=None, groups=None, return_tuner=False, verbose=True, tuner_verbose=True, display=None, return_train_score=False, kwargs={})
+2022-04-20 07:24:24,992:INFO:Checking exceptions
+2022-04-20 07:24:24,995:INFO:Preparing display monitor
+2022-04-20 07:24:25,048:INFO:Copying training dataset
+2022-04-20 07:24:25,051:INFO:Checking base model
+2022-04-20 07:24:25,052:INFO:Base model : Extra Trees Classifier
+2022-04-20 07:24:25,079:INFO:Declaring metric variables
+2022-04-20 07:24:25,107:INFO:Defining Hyperparameters
+2022-04-20 07:24:32,268:INFO:Tuning with n_jobs=-1
+2022-04-20 07:24:32,269:INFO:Initializing RandomizedSearchCV
+2022-04-20 07:25:04,052:INFO:best_params: {'actual_estimator__n_estimators': 190, 'actual_estimator__min_samples_split': 7, 'actual_estimator__min_samples_leaf': 6, 'actual_estimator__min_impurity_decrease': 0.001, 'actual_estimator__max_features': 1.0, 'actual_estimator__max_depth': 10, 'actual_estimator__criterion': 'entropy', 'actual_estimator__class_weight': 'balanced_subsample', 'actual_estimator__bootstrap': True}
+2022-04-20 07:25:04,054:INFO:Hyperparameter search completed
+2022-04-20 07:25:04,054:INFO:SubProcess create_model() called ==================================
+2022-04-20 07:25:04,056:INFO:Initializing create_model()
+2022-04-20 07:25:04,056:INFO:create_model(estimator=ExtraTreesClassifier(bootstrap=False, ccp_alpha=0.0, class_weight=None,
+                     criterion='gini', max_depth=None, max_features='auto',
+                     max_leaf_nodes=None, max_samples=None,
+                     min_impurity_decrease=0.0, min_impurity_split=None,
+                     min_samples_leaf=1, min_samples_split=2,
+                     min_weight_fraction_leaf=0.0, n_estimators=100, n_jobs=-1,
+                     oob_score=False, random_state=666, verbose=0,
+                     warm_start=False), fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=True, verbose=True, system=False, metrics=None, experiment_custom_tags=None, add_to_model_list=True, probability_threshold=None, display=<pycaret.internal.Display.Display object at 0x000001B66A635D88>, return_train_score=False, kwargs={'n_estimators': 190, 'min_samples_split': 7, 'min_samples_leaf': 6, 'min_impurity_decrease': 0.001, 'max_features': 1.0, 'max_depth': 10, 'criterion': 'entropy', 'class_weight': 'balanced_subsample', 'bootstrap': True})
+2022-04-20 07:25:04,057:INFO:Checking exceptions
+2022-04-20 07:25:04,057:INFO:Importing libraries
+2022-04-20 07:25:04,057:INFO:Copying training dataset
+2022-04-20 07:25:04,060:INFO:Defining folds
+2022-04-20 07:25:04,060:INFO:Declaring metric variables
+2022-04-20 07:25:04,091:INFO:Importing untrained model
+2022-04-20 07:25:04,092:INFO:Declaring custom model
+2022-04-20 07:25:04,120:INFO:Extra Trees Classifier Imported succesfully
+2022-04-20 07:25:04,174:INFO:Starting cross validation
+2022-04-20 07:25:04,176:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2022-04-20 07:25:09,990:INFO:Calculating mean and std
+2022-04-20 07:25:09,993:INFO:Creating metrics dataframe
+2022-04-20 07:25:10,025:INFO:Finalizing model
+2022-04-20 07:25:12,996:INFO:Uploading results into container
+2022-04-20 07:25:12,997:INFO:Uploading model into container now
+2022-04-20 07:25:12,997:INFO:create_model_container: 26
+2022-04-20 07:25:12,998:INFO:master_model_container: 26
+2022-04-20 07:25:12,998:INFO:display_container: 14
+2022-04-20 07:25:13,000:INFO:ExtraTreesClassifier(bootstrap=True, ccp_alpha=0.0,
+                     class_weight='balanced_subsample', criterion='entropy',
+                     max_depth=10, max_features=1.0, max_leaf_nodes=None,
+                     max_samples=None, min_impurity_decrease=0.001,
+                     min_impurity_split=None, min_samples_leaf=6,
+                     min_samples_split=7, min_weight_fraction_leaf=0.0,
+                     n_estimators=190, n_jobs=-1, oob_score=False,
+                     random_state=666, verbose=0, warm_start=False)
+2022-04-20 07:25:13,000:INFO:create_model() succesfully completed......................................
+2022-04-20 07:25:20,248:INFO:SubProcess create_model() end ==================================
+2022-04-20 07:25:20,291:INFO:create_model_container: 26
+2022-04-20 07:25:20,292:INFO:master_model_container: 26
+2022-04-20 07:25:20,292:INFO:display_container: 14
+2022-04-20 07:25:20,294:INFO:ExtraTreesClassifier(bootstrap=True, ccp_alpha=0.0,
+                     class_weight='balanced_subsample', criterion='entropy',
+                     max_depth=10, max_features=1.0, max_leaf_nodes=None,
+                     max_samples=None, min_impurity_decrease=0.001,
+                     min_impurity_split=None, min_samples_leaf=6,
+                     min_samples_split=7, min_weight_fraction_leaf=0.0,
+                     n_estimators=190, n_jobs=-1, oob_score=False,
+                     random_state=666, verbose=0, warm_start=False)
+2022-04-20 07:25:20,294:INFO:tune_model() succesfully completed......................................
+2022-04-20 07:30:17,957:INFO:Initializing create_model()
+2022-04-20 07:30:17,958:INFO:create_model(estimator=et, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=True, verbose=True, system=True, metrics=None, experiment_custom_tags=None, add_to_model_list=True, probability_threshold=None, display=None, return_train_score=False, kwargs={})
+2022-04-20 07:30:17,958:INFO:Checking exceptions
+2022-04-20 07:30:17,958:INFO:Preparing display monitor
+2022-04-20 07:30:18,028:INFO:Importing libraries
+2022-04-20 07:30:18,028:INFO:Copying training dataset
+2022-04-20 07:30:18,032:INFO:Defining folds
+2022-04-20 07:30:18,032:INFO:Declaring metric variables
+2022-04-20 07:30:18,058:INFO:Importing untrained model
+2022-04-20 07:30:18,085:INFO:Extra Trees Classifier Imported succesfully
+2022-04-20 07:30:18,138:INFO:Starting cross validation
+2022-04-20 07:30:18,140:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2022-04-20 07:30:35,040:INFO:Calculating mean and std
+2022-04-20 07:30:35,043:INFO:Creating metrics dataframe
+2022-04-20 07:30:35,077:INFO:Finalizing model
+2022-04-20 07:30:36,201:INFO:Uploading results into container
+2022-04-20 07:30:36,202:INFO:Uploading model into container now
+2022-04-20 07:30:36,243:INFO:create_model_container: 27
+2022-04-20 07:30:36,243:INFO:master_model_container: 27
+2022-04-20 07:30:36,243:INFO:display_container: 15
+2022-04-20 07:30:36,245:INFO:ExtraTreesClassifier(bootstrap=False, ccp_alpha=0.0, class_weight=None,
+                     criterion='gini', max_depth=None, max_features='auto',
+                     max_leaf_nodes=None, max_samples=None,
+                     min_impurity_decrease=0.0, min_impurity_split=None,
+                     min_samples_leaf=1, min_samples_split=2,
+                     min_weight_fraction_leaf=0.0, n_estimators=100, n_jobs=-1,
+                     oob_score=False, random_state=666, verbose=0,
+                     warm_start=False)
+2022-04-20 07:30:36,245:INFO:create_model() succesfully completed......................................
+2022-04-20 07:30:43,613:INFO:Initializing tune_model()
+2022-04-20 07:30:43,613:INFO:tune_model(estimator=ExtraTreesClassifier(bootstrap=False, ccp_alpha=0.0, class_weight=None,
+                     criterion='gini', max_depth=None, max_features='auto',
+                     max_leaf_nodes=None, max_samples=None,
+                     min_impurity_decrease=0.0, min_impurity_split=None,
+                     min_samples_leaf=1, min_samples_split=2,
+                     min_weight_fraction_leaf=0.0, n_estimators=100, n_jobs=-1,
+                     oob_score=False, random_state=666, verbose=0,
+                     warm_start=False), fold=None, round=4, n_iter=10, custom_grid=None, optimize=Accuracy, custom_scorer=None, search_library=scikit-learn, search_algorithm=None, early_stopping=False, early_stopping_max_iters=10, choose_better=False, fit_kwargs=None, groups=None, return_tuner=False, verbose=True, tuner_verbose=True, display=None, return_train_score=False, kwargs={})
+2022-04-20 07:30:43,613:INFO:Checking exceptions
+2022-04-20 07:30:43,615:INFO:Preparing display monitor
+2022-04-20 07:30:43,670:INFO:Copying training dataset
+2022-04-20 07:30:43,674:INFO:Checking base model
+2022-04-20 07:30:43,674:INFO:Base model : Extra Trees Classifier
+2022-04-20 07:30:43,702:INFO:Declaring metric variables
+2022-04-20 07:30:43,729:INFO:Defining Hyperparameters
+2022-04-20 07:30:50,732:INFO:Tuning with n_jobs=-1
+2022-04-20 07:30:50,732:INFO:Initializing RandomizedSearchCV
+2022-04-20 07:31:22,088:INFO:best_params: {'actual_estimator__n_estimators': 190, 'actual_estimator__min_samples_split': 7, 'actual_estimator__min_samples_leaf': 6, 'actual_estimator__min_impurity_decrease': 0.001, 'actual_estimator__max_features': 1.0, 'actual_estimator__max_depth': 10, 'actual_estimator__criterion': 'entropy', 'actual_estimator__class_weight': 'balanced_subsample', 'actual_estimator__bootstrap': True}
+2022-04-20 07:31:22,090:INFO:Hyperparameter search completed
+2022-04-20 07:31:22,091:INFO:SubProcess create_model() called ==================================
+2022-04-20 07:31:22,093:INFO:Initializing create_model()
+2022-04-20 07:31:22,094:INFO:create_model(estimator=ExtraTreesClassifier(bootstrap=False, ccp_alpha=0.0, class_weight=None,
+                     criterion='gini', max_depth=None, max_features='auto',
+                     max_leaf_nodes=None, max_samples=None,
+                     min_impurity_decrease=0.0, min_impurity_split=None,
+                     min_samples_leaf=1, min_samples_split=2,
+                     min_weight_fraction_leaf=0.0, n_estimators=100, n_jobs=-1,
+                     oob_score=False, random_state=666, verbose=0,
+                     warm_start=False), fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=True, verbose=True, system=False, metrics=None, experiment_custom_tags=None, add_to_model_list=True, probability_threshold=None, display=<pycaret.internal.Display.Display object at 0x000001B69A1E2C48>, return_train_score=False, kwargs={'n_estimators': 190, 'min_samples_split': 7, 'min_samples_leaf': 6, 'min_impurity_decrease': 0.001, 'max_features': 1.0, 'max_depth': 10, 'criterion': 'entropy', 'class_weight': 'balanced_subsample', 'bootstrap': True})
+2022-04-20 07:31:22,094:INFO:Checking exceptions
+2022-04-20 07:31:22,094:INFO:Importing libraries
+2022-04-20 07:31:22,094:INFO:Copying training dataset
+2022-04-20 07:31:22,097:INFO:Defining folds
+2022-04-20 07:31:22,097:INFO:Declaring metric variables
+2022-04-20 07:31:22,123:INFO:Importing untrained model
+2022-04-20 07:31:22,123:INFO:Declaring custom model
+2022-04-20 07:31:22,151:INFO:Extra Trees Classifier Imported succesfully
+2022-04-20 07:31:22,204:INFO:Starting cross validation
+2022-04-20 07:31:22,206:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2022-04-20 07:31:27,112:INFO:Calculating mean and std
+2022-04-20 07:31:27,115:INFO:Creating metrics dataframe
+2022-04-20 07:31:27,149:INFO:Finalizing model
+2022-04-20 07:31:30,239:INFO:Uploading results into container
+2022-04-20 07:31:30,239:INFO:Uploading model into container now
+2022-04-20 07:31:30,240:INFO:create_model_container: 28
+2022-04-20 07:31:30,240:INFO:master_model_container: 28
+2022-04-20 07:31:30,240:INFO:display_container: 16
+2022-04-20 07:31:30,242:INFO:ExtraTreesClassifier(bootstrap=True, ccp_alpha=0.0,
+                     class_weight='balanced_subsample', criterion='entropy',
+                     max_depth=10, max_features=1.0, max_leaf_nodes=None,
+                     max_samples=None, min_impurity_decrease=0.001,
+                     min_impurity_split=None, min_samples_leaf=6,
+                     min_samples_split=7, min_weight_fraction_leaf=0.0,
+                     n_estimators=190, n_jobs=-1, oob_score=False,
+                     random_state=666, verbose=0, warm_start=False)
+2022-04-20 07:31:30,242:INFO:create_model() succesfully completed......................................
+2022-04-20 07:31:37,372:INFO:SubProcess create_model() end ==================================
+2022-04-20 07:31:37,415:INFO:create_model_container: 28
+2022-04-20 07:31:37,415:INFO:master_model_container: 28
+2022-04-20 07:31:37,415:INFO:display_container: 16
+2022-04-20 07:31:37,417:INFO:ExtraTreesClassifier(bootstrap=True, ccp_alpha=0.0,
+                     class_weight='balanced_subsample', criterion='entropy',
+                     max_depth=10, max_features=1.0, max_leaf_nodes=None,
+                     max_samples=None, min_impurity_decrease=0.001,
+                     min_impurity_split=None, min_samples_leaf=6,
+                     min_samples_split=7, min_weight_fraction_leaf=0.0,
+                     n_estimators=190, n_jobs=-1, oob_score=False,
+                     random_state=666, verbose=0, warm_start=False)
+2022-04-20 07:31:37,417:INFO:tune_model() succesfully completed......................................
+2022-04-20 07:32:00,489:INFO:Initializing evaluate_model()
+2022-04-20 07:32:00,490:INFO:evaluate_model(estimator=ExtraTreesClassifier(bootstrap=True, ccp_alpha=0.0,
+                     class_weight='balanced_subsample', criterion='entropy',
+                     max_depth=10, max_features=1.0, max_leaf_nodes=None,
+                     max_samples=None, min_impurity_decrease=0.001,
+                     min_impurity_split=None, min_samples_leaf=6,
+                     min_samples_split=7, min_weight_fraction_leaf=0.0,
+                     n_estimators=190, n_jobs=-1, oob_score=False,
+                     random_state=666, verbose=0, warm_start=False), fold=None, fit_kwargs=None, plot_kwargs=None, feature_name=None, groups=None, use_train_data=False)
+2022-04-20 07:32:00,558:INFO:Initializing plot_model()
+2022-04-20 07:32:00,558:INFO:plot_model(fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), use_train_data=False, verbose=True, is_in_evaluate=True, display=None, display_format=None, estimator=ExtraTreesClassifier(bootstrap=True, ccp_alpha=0.0,
+                     class_weight='balanced_subsample', criterion='entropy',
+                     max_depth=10, max_features=1.0, max_leaf_nodes=None,
+                     max_samples=None, min_impurity_decrease=0.001,
+                     min_impurity_split=None, min_samples_leaf=6,
+                     min_samples_split=7, min_weight_fraction_leaf=0.0,
+                     n_estimators=190, n_jobs=-1, oob_score=False,
+                     random_state=666, verbose=0, warm_start=False), feature_name=None, fit_kwargs={}, groups=None, label=False, plot=parameter, plot_kwargs={}, save=False, scale=1, system=True)
+2022-04-20 07:32:00,559:INFO:Checking exceptions
+2022-04-20 07:32:00,696:INFO:Preparing display monitor
+2022-04-20 07:32:00,719:INFO:Preloading libraries
+2022-04-20 07:32:00,800:INFO:Copying training dataset
+2022-04-20 07:32:00,801:INFO:Copying test dataset
+2022-04-20 07:32:00,803:INFO:Plot type: parameter
+2022-04-20 07:32:01,090:INFO:Visual Rendered Successfully
+2022-04-20 07:32:08,140:INFO:plot_model() succesfully completed......................................
