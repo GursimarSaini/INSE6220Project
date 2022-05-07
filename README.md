@@ -1,4 +1,4 @@
-# PCA and Binary Classification on Office Room Occupancy
+# PCA and Binary Classification to determine Office Room Occupancy
 ---------------------------------------------------------
 ---------------------------------------------------------
 ## Abstract:
